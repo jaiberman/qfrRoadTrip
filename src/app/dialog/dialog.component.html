@@ -1,0 +1,83 @@
+<h1>Add QFR Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="songForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Movie</mat-label>
+            <input formControlName="movie" matInput placeholder="Movie Name">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Song</mat-label>
+            <input formControlName="song" matInput placeholder="Song">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Music Director</mat-label>
+            <input formControlName="music_director" matInput placeholder="Music Director">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Original Male Singer</mat-label>
+            <input formControlName="o_male_signers" matInput placeholder="Original Male Singer">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Original Female Singer</mat-label>
+            <input formControlName="o_female_singers" matInput placeholder="Original Female Singer">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Movie Year</mat-label>
+            <input formControlName="year" matInput type="number" placeholder="Movie Year">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Recreation Male Singer</mat-label>
+            <input formControlName="r_male_signers" matInput placeholder="Recreation Male Singer">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Recreation Female Singer</mat-label>
+            <input formControlName="r_female_singers" matInput placeholder="Recreation Female Singer">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Episode Number</mat-label>
+            <input formControlName="episode_number" matInput type="number" placeholder="Episode Number">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Song Start Time</mat-label>
+            <input formControlName="song_start_time" matInput type="number" placeholder="Song Start Time">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Song End Time</mat-label>
+            <input formControlName="song_end_time" matInput type="number" placeholder="Song End Time">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>YT Index</mat-label>
+            <input formControlName="yt_index" matInput placeholder="YT Index">
+        </mat-form-field> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Song Type</mat-label>
+            <mat-select formControlName="song_type" placeholder="Song Type">
+                <mat-option value="Male Solo">Male Solo</mat-option>
+                <mat-option value="Female Solo">Female Solo</mat-option>
+                <mat-option value="Duet">Duet</mat-option>
+                <mat-option value="Duet Corus">Duet Corus</mat-option>
+            </mat-select>
+        </mat-form-field> 
+       
+        <mat-form-field appearance="outline">
+            <mat-label>Channel Name</mat-label>
+            <input formControlName="channel_name" matInput placeholder="Channel Name">
+        </mat-form-field> 
+    </form>
+</div>
+<div mat-dialog-action [align]='"right"'>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addSong();">Save</button>
+</div>
